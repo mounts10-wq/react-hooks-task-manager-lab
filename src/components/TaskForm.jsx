@@ -3,21 +3,27 @@ import { TaskContext } from "../context/TaskContext";
 
 function TaskForm() {
   const [taskName, setTaskName] = useState("");
+  const inputId = useId();
+  const { addTask } = useContext(TaskContext);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (taskName.trim() === "") return;
+    const title = taskName.trim();
+    if (!title) return;
+
+    await addTask(title);
     setTaskName("");
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>New Task:</label>
+      <label htmlFor={inputId}>New Task:</label>
       <input
+        id={inputId}
         type="text"
+        placeholder="Add a new task..."
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
-        placeholder="Add a new task..."
       />
       <button type="submit">Add Task</button>
     </form>

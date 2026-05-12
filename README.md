@@ -1,3 +1,6 @@
+## Screenshot
+![Task Manager App](./Screenshot 2026-05-12 162128/.png)
+
 # Lab: Task Manager
 
 ## Overview
