@@ -1,5 +1,39 @@
 ## Screenshot
-![Task Manager App](./Screenshot 2026-05-12 162128/.png)
+![Task Manager App](./screenshots/task-manager.png)
+
+# Lab: Task Manager (Standard Hooks)
+
+## Overview
+A simple Task Manager app built with React that allows users to:
+- load tasks from a backend
+- add new tasks
+- mark tasks complete/undo
+- search/filter tasks in real time
+
+This lab focuses on using standard React hooks:
+- `useContext` for global state management
+- `useId` for accessible, unique form input IDs
+- `useRef` for persisting the search value without unnecessary re-renders
+
+## Screenshot
+![Task Manager App](./screenshots/task-manager.png)
+
+## Features
+- **Global Task State (`useContext`)**: Tasks are stored in a shared context provider.
+- **Add Task (`useId`)**: New tasks can be submitted through an accessible form.
+- **Toggle Complete (`useContext`)**: Click “Complete” / “Undo” to update task status.
+- **Search (`useRef`)**: Filter tasks dynamically using the search bar.
+
+## Tech Stack
+- React + Vite
+- JSON Server (mock backend)
+- Vitest + Testing Library
+
+## Getting Started
+
+### Install
+```sh
+npm install
 
 # Lab: Task Manager
 
